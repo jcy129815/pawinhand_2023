@@ -82,35 +82,21 @@ main #pawin_slide .swiper-button-next {
 /*swiper-slide 라이브러리에서 기본 제공하는 이전,다음 숨기기*/
 main #pawin_slide .swiper-button-prev::after,
 main #pawin_slide .swiper-button-next::after {display: none;}
+/*pawin-slide2*/
+main #pawin_slide2 {
+    max-width: 1160px; margin:0 auto;
+    /*slide대상으로 img태그를 삽입한 경우 높이값은 이미지 태그크기 만큼 자동으로 설정 되므로 높이 값은 작성 할 필요가 없다*/
+}
+main #pawin_slide2 .swiper-wrapper .swiper-slide img {width: 100%;}
+/*입양정보슬라이드*/
+main .dog_info {
+    padding: 100px 0 50px;
+    font-size: 2rem;text-align: center;
+}
+main #dog_info_slide {
+    background: aqua; max-width: 1160px; margin:0 auto;
+    width: calc(100% - 30px);
 
-main #my_slide {
-    width: 1160px; height: 550px; background: lightblue;
 }
-main #my_slide .swiper-wrapper {}
-main #my_slide .swiper-wrapper .swiper-slide {}
-main #my_slide .swiper-wrapper .my_slide_1 {
-    background: url(https://picsum.photos/id/18/1160)
-}
-main #my_slide .swiper-wrapper .my_slide_2 {
-    background: url(https://picsum.photos/id/54/1160);
-}
-main #my_slide .swiper-wrapper .my_slide_3 {
-    background: url(https://picsum.photos/id/64/1160);
-}
-main #my_slide .swiper-button-prev,
-main #my_slide .swiper-button-next {
-    width: 40px; height: 40px;
-}
-main #my_slide .swiper-button-prev {
-    background: url(../images/my_left.png) no-repeat;
-}
-main #my_slide .swiper-button-next {
-    background: url(../images/my_right.png) no-repeat;
-}
-
-main #my_slide .swiper-button-prev::after,
-main #my_slide .swiper-button-next::after {
-    display: none;
-}
-
+main #dog_info_slide .swiper-wrapper .swiper-slide .img img {width: 100%;}
 

@@ -4,7 +4,7 @@
 // 2. 햄버거 메뉴 클릭시 모바일 메뉴 보이기
 // 객체 = m_nav , m_nav_open
 // 객체.이벤트 (햄버거 메뉴 클릭 시)
-// 3. X버튼 클릭시 모바일 메뉴 숨기기
+// 3. X버튼 클릭시 모바일 메뉴 숨기기   
 // 객체 = close , m_nav_open
 //변수생성
 const m_nav_open = document.querySelector('.m_nav_open');
@@ -44,14 +44,24 @@ const pawin_slide = new Swiper('#pawin_slide',{
     },
     /* direction:'vertical'  *///슬라이드 수직 이동
 }) 
-const my_slide = new Swiper('#my_slide',{
-    autoplay:{
-        delay:1500,
-        disableOnInteraction:false,
-    },
+//pawin_slide2
+const pawin_slide2 = new Swiper('#pawin_slide2',{
+    autoplay:{delay:3000},
     loop:true,
-    navigation: {
-        nextEl: '#my_slide .swiper-button-next',
-        prevEl: '#my_slide .swiper-button-prev',
-    }
+    effect:'fade'
+})
+//입양정보 슬라이드
+const dog_info_slide = new Swiper('#dog_info_slide',{
+    slidesPerView: 'auto', //한번에 슬라이드가 4개 보이게 하겠다/ breakpoints추가시 auto로 바꾼다
+    spaceBetween:20, //여백 20px주겠다
+    autoplay:{delay:1000},
+    loop:true,
+    //swiper-slide 반응형웹 옵션
+    breakpoints:{
+        //해상도:{옵션:값}
+        //해상도 순서는 작은 해상도 -> 큰 해상도 순이다
+        700:{slidesPerView:2},//700이상
+        900:{slidesPerView:3},//900이상
+        1160:{slidesPerView:4}//1160이상일 경우 슬라이드4개 보인다
+    },
 })
